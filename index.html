@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game make with javascript</title>
+
+    <style>
+        body {
+            width: 100%;
+            height: 700px;
+            background: url(https://wallpapercave.com/wp/wp8319017.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+        .wrap {
+            width: 100%;
+            height: 700px;
+            position: relative;
+            background: rgb(0, 0, 0, .8);
+            padding-top: 100px;
+            
+        }
+        .wrap p {
+            color: #b3b3b3;
+            font-size: 30px;
+            text-align: center;
+            outline: 0;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+        .game-wrap {
+            width: 310px;
+            margin: 0 auto;
+        }
+        .game-circle {
+            width: 100px;
+            height: 100px;
+            float: left;
+            border: 2px solid #ff2222;
+            font-size: 80px;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            color: #fff;
+            justify-content: center;
+        }
+        .game-circle:nth-child(1),
+        .game-circle:nth-child(2),
+        .game-circle:nth-child(4),
+        .game-circle:nth-child(5),
+        .game-circle:nth-child(7),
+        .game-circle:nth-child(8) {
+            border-right: none;
+        }
+        .game-circle:nth-child(1),
+        .game-circle:nth-child(2),
+        .game-circle:nth-child(3),
+        .game-circle:nth-child(4),
+        .game-circle:nth-child(5),
+        .game-circle:nth-child(6) {
+            border-bottom: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <p>Game with Javascript</p>
+
+
+        <div class="game-wrap">
+            <div class="game-circle"></div>
+            <div class="game-circle"></div>
+            <div class="game-circle"></div>
+
+            <div class="game-circle"></div>
+            <div class="game-circle"></div>
+            <div class="game-circle"></div>
+
+            <div class="game-circle"></div>
+            <div class="game-circle"></div>
+            <div class="game-circle"></div>
+        </div>
+    </div>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script>
+        var count=0;
+
+        $('.game-circle').click(function(){
+            count = count+1;
+            
+            if(count %2 == 1) {
+                $(this).text("X");
+            }
+            else {
+                $(this).text("O");
+            }
+        });
+    </script>
+</body>
+</html>
